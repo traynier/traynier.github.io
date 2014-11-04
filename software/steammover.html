@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Steam Mover - traynier.com</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="http://traynier.github.io/images/favicon.png" rel="icon">
+
+<link rel="canonical" href="http://traynier.github.io/software/steammover">
+
+        <meta name="author" content="traynier.com" />
+        <meta name="description" content="Do you have a super-fast SSD that is too small to hold all your steam games at the same time? Then try Steam Mover." />
+
+    <meta property="og:site_name" content="traynier.com" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Steam Mover"/>
+    <meta property="og:url" content="http://traynier.github.io/software/steammover"/>
+    <meta property="og:description" content="Do you have a super-fast SSD that is too small to hold all your steam games at the same time? Then try Steam Mover." />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://traynier.github.io/theme/css/bootstrap.simplex.min.css" type="text/css"/>
+    <link href="http://traynier.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://traynier.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://traynier.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="http://traynier.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="traynier.com ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://traynier.github.io/" class="navbar-brand">
+traynier.com            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://traynier.github.io/">
+                             
+                          </a></li>
+                         <li class="active"><a href="http://traynier.github.io/software/steammover">
+                             Steam Mover
+                          </a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10">
+
+    <section id="content" class="body">
+        <h1 class="entry-title">Steam Mover</h1>
+        
+        <div class="entry-content">
+            <p>Have you run out of space on your C:\ drive?</p>
+<p>Or do you have a super-fast SSD that is too small to hold all your steam games at the same time?</p>
+<p>Then try Steam Mover.</p>
+<p>Following on from a very interesting <a href="http://forums.steampowered.com/forums/showthread.php?p=14060071#post14060071">post on the Steam forums</a> I've created a little app to make moving the files and creating the junction points much much easier!</p>
+<h2>Example Use</h2>
+<p>Here I have my steam folder in the default location, and the application should find that for you.  If not, select the \Steam\SteamApps\Common\ folder yourself, and a secondary hard disk D:\, where I have created a folder.</p>
+<p>Note that Steam Mover can be used to move any folder around (by changing the Source Path), but for Steam the maximum benefit is in moving individual games from the Common folder.</p>
+<p><img alt="Steam Mover Screenshot" src="/images/steamwindow.png" /></p>
+<p>I simply select a few games I don't play very often, and click the "Right Arrow" button.  This fires off a few command line windows - please let them run to completion.</p>
+<p>It is using the built-in Windows commands: xcopy, rd, and mklink.  If you want to see the exact commands it is running, tick the "I want to run the commands myself" box.</p>
+<p><img alt="Steam Mover Screenshot" src="/images/commandline.png" /></p>
+<p>Once finished, you will see that I have moved Left 4 Dead and World of Goo to my D:\ drive, but because of the Junction Points created on the C:\ drive the games continue to work in Steam.</p>
+<p><img alt="Steam Mover Screenshot" src="/images/steamwindow2.png" /></p>
+<p>If you want to move games back to your C:\ drive, simply click on the left arrow button.</p>
+<h3>Pro's</h3>
+<ul>
+<li>You can store all your steam games on multiple drives, and they all carry on working!  You no longer have to do the install/uninstall shuffle to get enough disk space on drive C:\ for that latest game.</li>
+<li>You can benefit from that fast, but small, SSD drive by only storing the games you regularly play on the SSD, and moving the older games onto a slower larger hard disk.  And all games remain playable in steam.</li>
+<li>If you want to see what it's doing and run the commands from the command line yourself, tick the "I want to run the commands myself" box.  Note that SteamMover runs commands one at a time, and stops if it gets an error.</li>
+<li>I actually now install steam and all games on my large D:\ HDD, and use Steam Mover to just move my favourite games to the C:\ SSD for a speed boost when playing them.</li>
+</ul>
+<h3>Con's</h3>
+<ul>
+<li>No warranty.  Whatsoever.</li>
+<li>Things may go wrong.  I accept no liability of lost files, yadda, yadda.  Its moving a lot of files around, without much checking on permissions, so it may not be perfect.  It does work fine for me though.  If it does break you may have to copy/move files around yourself, restore from a backup, or re-download your steam games.  Please leave feedback below if you get an error, and I shall endevour to fix it in the next release.</li>
+<li>Requires Microsoft Windows Vista or above (Windows 7, 8, 8.1 are all reported to work fine).  It will NOT work on Windows XP.</li>
+<li>It requires NTFS formatted drives.  It will not work with FAT32.</li>
+<li>Junction Points can only relocate complete folders, not individual files.  So unfortunately it will not help with the massive .gcf files in the steamapps folder itself (mostly Valve games such as Counter-Strike and the Half-Life series).  To those that have asked, I have tried using mklink to create hardlinks, but they do not work to link to another drive - they only provide a shortcut to a file on the same drive.</li>
+</ul>
+<h2>Download</h2>
+<p><a href="/files/SteamMover_v0_1.zip">SteamMover v0.1</a> 1168k</p>
+<p>Please ensure you download from the above link - various "cracked" versions are hosted on various "warez" sites, which is hilarious seeing as its freeware.</p>
+<h3>Version History</h3>
+<p><strong>v0.1</strong> - 2nd April 2010
+The initial release.</p>
+<h3>Installation</h3>
+<p>Its a Delphi Application, and no installer is required.  Just unzip to wherever you want and run SteamMover.exe.</p>
+<h3>Uninstall</h3>
+<p>Simply delete the SteamMover.exe, and if you really want you can remove the Registry keys from HKEY_CURRENT_USER\Software\SteamMover.</p>
+<h2>Mentions</h2>
+<ul>
+<li>Tens of thousands of downloads, and I have received nearly 1000 comments from users</li>
+<li>Hundreds of thousands of <a href="https://www.google.co.uk/?q=steam+mover#q=steam+mover">google hits</a></li>
+<li><a href="http://lifehacker.com/5626931/steam-mover-relocates-applications-to-free-up-space-on-your-primary-drive">Lifehacker</a></li>
+<li><a href="http://revision3.com/haktip/firewatersteam/">Hak5 Video</a></li>
+<li>On the sidebar of <a href="http://www.reddit.com/r/Steam/">/r/steam/</a></li>
+</ul>
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'traynier'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'page-software/steammover';
+                var disqus_url = 'http://traynier.github.io/software/steammover';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </div>
+    </section>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy;  traynier.com         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://traynier.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://traynier.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://traynier.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'traynier'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15620487-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+</body>
+</html>

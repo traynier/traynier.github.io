@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
->
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
     <title>Steam Mover - traynier.com</title>
     <!-- Using the latest rendering mode for IE -->
@@ -9,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link href="http://traynier.github.io/images/favicon.png" rel="icon">
 
-<link rel="canonical" href="http://traynier.github.io/software/steammover">
+<link rel="canonical" href="https://traynier.com/software/steammover.html">
 
         <meta name="author" content="traynier.com" />
         <meta name="description" content="Do you have a super-fast SSD that is too small to hold all your steam games at the same time? Then try Steam Mover." />
@@ -19,19 +17,19 @@
     <meta property="og:site_name" content="traynier.com" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Steam Mover"/>
-    <meta property="og:url" content="http://traynier.github.io/software/steammover"/>
+    <meta property="og:url" content="https://traynier.com/software/steammover.html"/>
     <meta property="og:description" content="Do you have a super-fast SSD that is too small to hold all your steam games at the same time? Then try Steam Mover." />
 
 
+
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://traynier.github.io/theme/css/bootstrap.simplex.min.css" type="text/css"/>
-    <link href="http://traynier.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://traynier.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://traynier.com/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://traynier.github.io/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://traynier.github.io/theme/css/style.css" type="text/css"/>
+    <link href="https://traynier.com/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://traynier.com/theme/css/style.css" type="text/css"/>
 
-        <link href="http://traynier.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="traynier.com ATOM Feed"/>
+
 
 </head>
 <body>
@@ -45,27 +43,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://traynier.github.io/" class="navbar-brand">
+            <a href="https://traynier.com/" class="navbar-brand">
 traynier.com            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://traynier.github.io/">
-                             
-                          </a></li>
-                         <li class="active"><a href="http://traynier.github.io/software/steammover">
-                             Steam Mover
-                          </a></li>
+                    <li><a href="software/steammover.html">Steam Mover</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
 </div> <!-- /.navbar -->
 
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
 <div class="container">
     <div class="row">
-        <div class="col-sm-10">
-
+        <div class="col-lg-12">
     <section id="content" class="body">
         <h1 class="entry-title">Steam Mover</h1>
         
@@ -77,12 +75,12 @@ traynier.com            </a>
 <h2>Example Use</h2>
 <p>Here I have my steam folder in the default location, and the application should find that for you.  If not, select the \Steam\SteamApps\Common\ folder yourself, and a secondary hard disk D:\, where I have created a folder.</p>
 <p>Note that Steam Mover can be used to move any folder around (by changing the Source Path), but for Steam the maximum benefit is in moving individual games from the Common folder.</p>
-<p><img alt="Steam Mover Screenshot" src="/images/steamwindow.png" /></p>
+<p><img alt="Steam Mover Screenshot" src="https://traynier.com/images/steamwindow.png"></p>
 <p>I simply select a few games I don't play very often, and click the "Right Arrow" button.  This fires off a few command line windows - please let them run to completion.</p>
 <p>It is using the built-in Windows commands: xcopy, rd, and mklink.  If you want to see the exact commands it is running, tick the "I want to run the commands myself" box.</p>
-<p><img alt="Steam Mover Screenshot" src="/images/commandline.png" /></p>
+<p><img alt="Steam Mover Screenshot" src="https://traynier.com/images/commandline.png"></p>
 <p>Once finished, you will see that I have moved Left 4 Dead and World of Goo to my D:\ drive, but because of the Junction Points created on the C:\ drive the games continue to work in Steam.</p>
-<p><img alt="Steam Mover Screenshot" src="/images/steamwindow2.png" /></p>
+<p><img alt="Steam Mover Screenshot" src="https://traynier.com/images/steamwindow2.png"></p>
 <p>If you want to move games back to your C:\ drive, simply click on the left arrow button.</p>
 <h3>Pro's</h3>
 <ul>
@@ -100,7 +98,7 @@ traynier.com            </a>
 <li>Junction Points can only relocate complete folders, not individual files.  So unfortunately it will not help with the massive .gcf files in the steamapps folder itself (mostly Valve games such as Counter-Strike and the Half-Life series).  To those that have asked, I have tried using mklink to create hardlinks, but they do not work to link to another drive - they only provide a shortcut to a file on the same drive.</li>
 </ul>
 <h2>Download</h2>
-<p><a href="/files/SteamMover_v0_1.zip">SteamMover v0.1</a> 1168k</p>
+<p><a href="https://traynier.com/files/SteamMover_v0_1.zip">SteamMover v0.1</a> 1168k</p>
 <p>Please ensure you download from the above link - various "cracked" or "official" versions are hosted on other sites, which is hilarious seeing as its freeware.</p>
 <h3>Version History</h3>
 <p><strong>v0.1</strong> - 2nd April 2010</p>
@@ -113,7 +111,6 @@ traynier.com            </a>
 <ul>
 <li>Hundreds of thousands of downloads, over 1000 feedback comments from users</li>
 <li><a href="http://lifehacker.com/5626931/steam-mover-relocates-applications-to-free-up-space-on-your-primary-drive">Lifehacker</a></li>
-<li><a href="http://revision3.com/haktip/firewatersteam/">Hak5 Video</a></li>
 <li>On the sidebar of <a href="http://www.reddit.com/r/Steam/">/r/steam/</a></li>
 </ul>
 <h2>Leave feedback</h2>
@@ -123,22 +120,26 @@ traynier.com            </a>
         </div>
     </div>
 </div>
+<!-- End Content Container -->
+
 <footer>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy;  traynier.com         </div>
+         <div class="col-xs-10">&copy;  traynier.com
+         </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>
    </div>
 </footer>
-<script src="http://traynier.github.io/theme/js/jquery.min.js"></script>
+<script src="https://traynier.com/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://traynier.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://traynier.com/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://traynier.github.io/theme/js/respond.min.js"></script>
+<script src="https://traynier.com/theme/js/respond.min.js"></script>
+
 
     <!-- Google Analytics -->
     <script type="text/javascript">
@@ -157,5 +158,7 @@ traynier.com            </a>
         })();
     </script>
     <!-- End Google Analytics Code -->
+
+
 </body>
 </html>
